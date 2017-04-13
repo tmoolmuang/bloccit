@@ -18,7 +18,7 @@ end
 users = User.all
  
 # Create Topics
-15.times do
+5.times do
   Topic.create!(
     name:         RandomData.random_sentence,
     description:  RandomData.random_paragraph
@@ -38,7 +38,7 @@ end
 posts = Post.all
 
 # Create Comments
-100.times do
+50.times do
   Comment.create!(
     post: posts.sample,
     body: RandomData.random_paragraph
@@ -51,6 +51,14 @@ admin = User.create!(
   email:    'admin@example.com',
   password: 'helloworld',
   role:     'admin'
+)
+
+# Create a moderator
+moderator = User.create!(
+  name:     'Moderator User',
+  email:    'moderator@example.com',
+  password: 'helloworld',
+  role:     'moderator'
 )
 
 # Create a member
