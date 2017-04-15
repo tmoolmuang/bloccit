@@ -1,0 +1,4 @@
+#we're storing our Sendgrid password and username as ENV variables, 
+#but doesn't actually share that the values of these keys.
+SENDGRID_PASSWORD:
+SENDGRID_USERNAME:
