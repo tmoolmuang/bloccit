@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <small>
+    <%= get_post_title(post_id).title %> 
+  </small>
+</div>
+<div class="col-md-2">
+  <small>
+    <% avatar_url = get_user_gravatar(post_id).avatar_url(32) %>
+    <% if avatar_url %>
+      <div class="media-left">
+        <%= image_tag avatar_url, class: 'media-object' %>
+      </div>
+    <% end %>
+  </small>
+</div>
+<div class="col-md-2">
+  <small>
+    <%= get_vote_count(post_id) %> votes
+  </small>
+</div>
+<div class="col-md-2">
+  <small>
+    <%= get_comment_count(post_id) %> comments
+  </small>
+</div>
+
